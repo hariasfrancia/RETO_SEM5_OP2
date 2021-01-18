@@ -4,7 +4,7 @@
 function Hamburguesa(){
     var precHam;
     
-    var tipoHam = +prompt("Ingrese tipo de hamburguesa: (TIPO 1: S/.20.00 | TIPO 2: S/.25.00 | TIPO 3: S/. 28.00");
+    var tipoHam = +prompt("Ingrese tipo de hamburguesa: (1: SENCILLA - S/.20.00 | 2:DOBLE - S/.25.00 | 3:TRIPLE - S/. 28.00");
     var numHam = +prompt("Ingrese cantidad a comprar: ");
 
     switch(tipoHam){
@@ -14,12 +14,13 @@ function Hamburguesa(){
         default: console.log("Error, ingrese un valor dentro de las 3 categorías"); break;
     }
     console.log("Total de la compra es: S/."+precHam);
-
-    var tipoPago = +prompt("Paga con tarjeta de crédito: ( Y / N)");
-        if(tipoPago = 'Y'){
+    
+    var tipoPago = +prompt("Paga con Tarjeta: (1:SI | 2:NO)");
+    
+        if(tipoPago == 1){
             precHam = precHam - (precHam*0.05);
             console.log("Se Aplica un sobrecargo del 5%: "+precHam);
-        }else{
+        }else if(tipoPago == 2){
             console.log("No hay descuento.")
         }
 }
